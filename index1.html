@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda | TokoSJ</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #457b9d;
+        --primary-dark: #1d3557;
+        --accent: #e63946;
+        --light: #f1faee;
+        --max-width: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        color: var(--primary-dark);
+        background-color: var(--light);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      header {
+        background: var(--primary);
+        color: #fff;
+        padding: 1rem 2rem;
+      }
+
+      header .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 40px;
+        margin-right: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .logo span {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      nav a {
+        color: #fff;
+        margin-left: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+      }
+
+      nav a:hover {
+        opacity: 0.7;
+      }
+
+      /* Auth Buttons */
+      .auth {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .auth button {
+        background: #fff;
+        color: var(--primary);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .auth button:hover {
+        background: #ddd;
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        background: linear-gradient(to bottom right, #ccc, #e63946);
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-content {
+        position: relative;
+        color: #fff;
+        max-width: 800px;
+        padding: 0 1rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+
+      .btn:hover {
+        opacity: 0.8;
+      }
+
+      /* Sections */
+      section {
+        padding: 4rem 1rem;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 60px;
+        height: 4px;
+        background: var(--accent);
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      #about p {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .service-card {
+        background: #fff;
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-6px);
+      }
+
+      #contact form {
+        display: grid;
+        gap: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      #contact input,
+      #contact textarea {
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      #contact button {
+        justify-self: center;
+      }
+
+      footer {
+        background: var(--primary-dark);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="logogwegh.png" alt="Logo" />
+          <span>ContohLogo</span>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">Tentang</a>
+          <a href="#services">Layanan</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+        <div class="auth">
+          <a href="index.html" class="btn">logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Selamat Datang di TokoSJ</h1>
+        <p>
+          kami menyediakan item game dan menjual game secara legal (tidak bajakan)
+        </p>
+        <button class="btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Hubungi Kami</button>
+      </div>
+    </section>
+
+<!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Tentang Kami</h2>
+        <p>
+          Kami adalah tim profesional yang berdedikasi untuk memberikan layanan terbaik
+          di bidang TokoSJ
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Services -->
+    <section id="services" style="background-color: #fff;">
+      <div class="container">
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>ITEM GAME</h3>
+            <p>
+              seperti robux,diamond ff/ml, dll
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>GAME</h3>
+            <p>
+              seperti minecraft, game steam, dll
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>suntik followers ig, tiktok</h3>
+            <p>
+              menjual followers dengan harga terjangkau
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Kontak Kami</h2>
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Nama" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" rows="5" placeholder="Pesan"></textarea>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Contoh Website. All rights reserved.
+    </footer>
+
+    <script>
+      function login() {
+        alert("Fitur Login diklik. Ini tempat memunculkan form login.");
+      }
+
+      function register() {
+        alert("Fitur Daftar diklik. Ini tempat memunculkan form pendaftaran.");
+      }
+
+      function logout() {
+        alert("Anda telah logout.");
+      }
+    </script>
+  </body>
+</html>

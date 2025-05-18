@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar | Contoh Website</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #457b9d;
+        --primary-dark: #1d3557;
+        --accent: #e63946;
+        --light: #f1faee;
+        --max-width: 500px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: var(--light);
+        color: var(--primary-dark);
+      }
+
+      header {
+        background: var(--primary);
+        color: #fff;
+        padding: 1rem 2rem;
+      }
+
+      header .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 40px;
+        margin-right: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .logo span {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      nav a {
+        color: #fff;
+        margin-left: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      .auth-card {
+        width: 100%;
+        max-width: var(--max-width);
+        background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .auth-card h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .auth-card form {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .auth-card input[type="text"],
+      .auth-card input[type="email"],
+      .auth-card input[type="password"] {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .btn {
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: opacity 0.3s ease;
+      }
+
+      .btn:hover {
+        opacity: 0.85;
+      }
+
+      .alt-link {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .alt-link a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      footer {
+        background: var(--primary-dark);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="logogwegh.png" alt="Logo" />
+          <span>ContohLogo</span>
+        </div>
+        <nav>
+          <a href="index.html">Beranda</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="auth-card">
+        <h2>Daftar Akun Baru</h2>
+        <form action="login.html" method="POST">
+  <input type="text" name="name" placeholder="Nama Lengkap" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="password" name="password" placeholder="Kata Sandi" required />
+  <input type="password" name="confirm" placeholder="Konfirmasi Kata Sandi" required />
+  <button type="submit" class="btn">Daftar</button>
+</form>
+
+        <script>
+  function handleRegister(event) {
+    event.preventDefault(); // Cegah reload
+
+    // Simulasi pendaftaran sukses
+    alert("Pendaftaran berhasil! Silakan login.");
+
+    // Redirect ke halaman login
+    window.location.href = "login.html";
+    return false;
+  }
+</script>
+
+        <p class="alt-link">
+          Sudah punya akun?
+          <a href="Login.html">Masuk di sini</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2025 Contoh Website. All rights reserved.
+    </footer>
+  </body>
+</html>
